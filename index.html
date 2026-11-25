@@ -1,182 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asad Tanveer | Robotics & ML Engineer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* --- CSS VARIABLES & RESET --- */
-        :root {
-            --primary: #2c3e50;
-            --accent: #2980b9;
-            --text-dark: #333;
-            --text-light: #f4f4f4;
-            --bg-light: #ffffff;
-            --bg-off: #f9f9f9;
-        }
-        body { margin: 0; font-family: 'Segoe UI', sans-serif; color: var(--text-dark); line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        
-        /* --- HERO SECTION --- */
-        header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        header h1 { margin: 0; font-size: 2.5rem; }
-        header p { font-size: 1.2rem; opacity: 0.9; margin-top: 0.5rem; }
-        .social-links { margin-top: 1.5rem; }
-        .social-links a {
-            color: white; font-size: 1.5rem; margin: 0 10px; transition: transform 0.3s;
-        }
-        .social-links a:hover { transform: translateY(-3px); color: #ecf0f1; }
-
-        /* --- LAYOUT UTILITIES --- */
-        .container { max-width: 1100px; margin: auto; padding: 2rem; }
-        section { margin-bottom: 4rem; }
-        h2 { border-left: 5px solid var(--accent); padding-left: 1rem; color: var(--primary); }
-
-        /* --- SKILLS GRID --- */
-        .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
-        .skill-tag { background: #e0e0e0; padding: 5px 15px; border-radius: 20px; font-weight: 500; font-size: 0.9rem; }
-
-        /* --- PROJECT CARDS --- */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .card {
-            background: white; border-radius: 8px; overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;
-            border: 1px solid #eee;
-        }
-        .card:hover { transform: translateY(-5px); }
-        .card-media {
-            width: 100%; height: 200px; background-color: #ddd; object-fit: cover;
-            display: flex; align-items: center; justify-content: center; color: #666;
-        }
-        .card-content { padding: 1.5rem; }
-        .card-title { margin: 0 0 0.5rem 0; font-size: 1.25rem; color: var(--primary); }
-        .card-tech { font-size: 0.85rem; color: var(--accent); margin-bottom: 1rem; display: block; }
-        .btn { 
-            display: inline-block; background: var(--primary); color: white; 
-            padding: 8px 16px; border-radius: 4px; font-size: 0.9rem; margin-top: 10px;
-        }
-
-        /* --- THE LAB (ARDUINO JOURNEY) --- */
-        .lab-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
-        .lab-item { border-radius: 8px; overflow: hidden; position: relative; }
-        .lab-item img, .lab-item video { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .lab-overlay {
-            position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7);
-            color: white; padding: 5px; font-size: 0.8rem; text-align: center;
-        }
-
-        /* --- FOOTER --- */
-        footer { text-align: center; padding: 2rem; background: var(--primary); color: white; margin-top: 4rem; }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#eeece3">
+<meta name="description" content="Asad Tanveer — electronics and communication engineering undergraduate exploring embedded systems, robotics and applied machine learning.">
+<title>Asad Tanveer — Engineering & Research</title>
+<style>
+:root{--paper:#eeece3;--ink:#242822;--muted:#666d61;--green:#c4d6a6;--line:#bfc1b5;--dark:#1b211e;--white:#f7f5ed}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}button{font:inherit}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #7e9c44;outline-offset:5px}h1,h2,h3,p{margin:0}h1,h2,h3{line-height:1.03;font-weight:500;letter-spacing:-.055em}h1{font-size:clamp(3.4rem,8.2vw,9rem)}h2{font-size:clamp(2.8rem,6.6vw,7rem)}h3{font-size:clamp(1.8rem,3.4vw,3.6rem)}.wrap{width:min(1440px,90%);margin:auto}.eyebrow{font:600 .71rem/1.5 Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}.muted{color:var(--muted)}.nav{position:sticky;top:0;z-index:10;background:rgba(238,236,227,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:19px 0}.brand{font-size:1.08rem;letter-spacing:-.04em;font-weight:800}.nav-links{display:flex;align-items:center;gap:25px;font-size:.83rem}.pill{display:inline-flex;align-items:center;justify-content:space-between;gap:25px;padding:13px 20px;border:1px solid currentColor;border-radius:100px;font-weight:600;font-size:.82rem;transition:background .25s,color .25s}.pill:hover{background:var(--ink);color:var(--paper)}.menu{display:none;background:none;border:0;padding:8px;color:inherit}.hero{padding:clamp(38px,7vw,100px) 0 24px}.hero-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:30px}.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:4vw}.hero h1 em{font-family:Georgia,serif;font-weight:400;letter-spacing:-.075em}.lead{max-width:540px;font-size:clamp(1.05rem,1.7vw,1.45rem);margin:28px 0;color:var(--muted)}.portrait{aspect-ratio:4/5;background:#35423b;position:relative;overflow:hidden;border-radius:2px;display:grid;place-items:center;color:var(--green)}.portrait svg{width:80%;height:80%;opacity:.7}.media img,.portrait img,.portrait video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.placeholder-label{position:absolute;bottom:16px;left:16px;right:16px;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:inherit;display:flex;justify-content:space-between}.hero-bottom{display:flex;justify-content:space-between;padding:22px 0;margin-top:32px;border-top:1px solid var(--line)}.section{padding:clamp(65px,10vw,150px) 0}.intro{display:grid;grid-template-columns:1fr 1.45fr;gap:7vw}.intro p{font-size:clamp(1.4rem,2.5vw,2.65rem);line-height:1.3;letter-spacing:-.035em}.intro .small{font-size:1rem;line-height:1.65;letter-spacing:0;max-width:580px;margin-top:24px}.dark{background:var(--dark);color:var(--white)}.dark .eyebrow,.dark .muted{color:#bbc4b8}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:55px}.section-head .eyebrow{margin-bottom:18px}.section-head p{max-width:330px}.projects{display:grid;grid-template-columns:1fr 1fr;gap:65px 30px}.project:nth-child(even){margin-top:75px}.media{position:relative;display:grid;place-items:center;aspect-ratio:1.4;overflow:hidden;color:#d5e2c1;background:#303c34}.media svg{width:86%;height:76%;transition:transform .5s}.project:hover .media svg{transform:scale(1.06)}.media.blue{background:#344450;color:#b9d6df}.media.clay{background:#58483b;color:#ebc8a3}.media.slate{background:#373747;color:#d1c9e8}.project-meta{display:flex;justify-content:space-between;gap:15px;margin:20px 0 10px}.project h3{margin-bottom:12px}.project p{max-width:590px;color:#c5cec2;font-size:1rem}.project details{margin-top:20px;border-top:1px solid #566057;padding:13px 0}.project summary{cursor:pointer;font-size:.85rem;list-style:none;display:flex;justify-content:space-between}.project summary:after{content:'+';font-size:1.1rem}.project details[open] summary:after{content:'−'}.project details p{margin-top:12px}.research{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:start}.research h2{margin:20px 0}.research p{max-width:650px;color:var(--muted);margin:15px 0}.research-card{border-top:1px solid var(--line);padding:22px 0}.research-card h3{font-size:1.8rem;letter-spacing:-.035em;margin:8px 0}.research-card p{margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.tag{border:1px solid var(--line);border-radius:100px;padding:7px 13px;font-size:.78rem}.lab{background:#dbe3ce}.lab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.lab-grid .media{aspect-ratio:4/3}.lab-grid h3{font-size:1.45rem;margin-top:16px}.contact{background:#c7d7aa}.contact h2{max-width:1000px;margin:20px 0 35px}.contact-links{display:flex;flex-wrap:wrap;gap:12px}footer{padding:25px 0;background:#c7d7aa;border-top:1px solid #a9b58f}footer .wrap{display:flex;justify-content:space-between;gap:15px;font-size:.8rem}.reveal{transition:opacity .7s,transform .7s}.js .reveal.pending{opacity:0;transform:translateY(24px)}@media(max-width:760px){.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);padding:22px 5%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line)}.nav-links.open{display:flex}.menu{display:block}.hero-grid,.intro,.research,.projects{grid-template-columns:1fr}.hero-grid{gap:36px}.portrait{aspect-ratio:5/4}.hero-top,.hero-bottom{font-size:.65rem}.section-head{display:block}.section-head p{margin-top:20px}.project:nth-child(even){margin-top:0}.projects{gap:45px}.lab-grid{grid-template-columns:1fr}.lab-grid .media{aspect-ratio:16/9}.hero h1{font-size:clamp(3.1rem,12vw,6rem)}.intro{gap:25px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.js .reveal.pending{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-
-    <header>
-        <h1>Asad Tanveer</h1>
-        <p>ECE Student @ JMI | Robotics | Machine Learning | Bionics</p>
-        <div class="social-links">
-            <a href="https://github.com/mirzasadbaig" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/asadtanveer1109/" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:asadtanveer1109@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-    </header>
-
-    <div class="container">
-        
-        <section>
-            <h2>About Me</h2>
-            <p>I am a first-year B.Tech student passionate about bridging the gap between hardware and intelligence. 
-            Currently working on bionic prosthetics controlled by EMG signals and applying machine learning to real-world datasets.</p>
-            
-            <div class="skills-grid">
-                <span class="skill-tag">Arduino & ESP32</span>
-                <span class="skill-tag">Python & C</span>
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">Robotics</span>
-                <span class="skill-tag">Soldering & Prototyping</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>Featured Projects</h2>
-            <div class="grid">
-                
-                <article class="card">
-                    <img src="assets/images/bionic-hand.jpg" alt="Bionic Hand Project" class="card-media" onerror="this.style.display='none'"> 
-                    <div style="height:200px; background:#eee; display:flex; align-items:center; justify-content:center;" class="card-media-placeholder">
-                        <i class="fas fa-robot fa-2x"></i>
-                    </div>
-
-                    <div class="card-content">
-                        <h3 class="card-title">InMoov Bionic Hand</h3>
-                        <span class="card-tech">ESP32 • EMG Sensors • Servo Motors</span>
-                        <p>A 3D-printed robotic hand that replicates human finger movements using real-time muscle signal processing.</p>
-                        <a href="#" class="btn">View Demo</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="assets/images/line-follower.jpg" alt="Line Follower" class="card-media" onerror="this.style.display='none'">
-                    <div style="height:200px; background:#eee; display:flex; align-items:center; justify-content:center;" class="card-media-placeholder">
-                        <i class="fas fa-car-side fa-2x"></i>
-                    </div>
-
-                    <div class="card-content">
-                        <h3 class="card-title">Autonomous Line Follower</h3>
-                        <span class="card-tech">Arduino • MIT App Inventor • HC-05</span>
-                        <p>Dual-mode robot featuring autonomous line tracking and manual control via a custom Android app.</p>
-                        <a href="#" class="btn">View Code</a>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <div class="card-content">
-                        <h3 class="card-title">Parkinson's Detection AI</h3>
-                        <span class="card-tech">Python • Scikit-Learn • Flask</span>
-                        <p>An ML model detecting Parkinson's disease from voice recordings with 88% accuracy, deployed via a web app.</p>
-                        <a href="https://github.com/mirzasadbaig/parkinsons-disease-detection" class="btn">View on GitHub</a>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>The Lab: Early Prototypes</h2>
-            <p>A collection of my early experiments with Arduino, circuits, and code.</p>
-            <div class="lab-gallery">
-                
-                <div class="lab-item">
-                    <img src="assets/images/learning-1.jpg" alt="Arduino Setup">
-                    <div class="lab-overlay">First Circuit</div>
-                </div>
-
-                <div class="lab-item">
-                     <div style="width:100%; height:100%; background:#000; display:flex; align-items:center; justify-content:center; color:white;">
-                        <i class="fas fa-play-circle fa-2x"></i>
-                     </div>
-                     <div class="lab-overlay">Motor Test (Video)</div>
-                </div>
-
-                <div class="lab-item">
-                    <img src="assets/images/learning-2.jpg" alt="Soldering">
-                    <div class="lab-overlay">Soldering Work</div>
-                </div>
-
-            </div>
-        </section>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Asad Tanveer. Built with code.</p>
-    </footer>
-
-</body>
-</html>
+<nav class="nav" aria-label="Main navigation"><div class="wrap nav-inner"><a class="brand" href="#home">ASAD TANVEER<span aria-hidden="true">.</span></a><button class="menu" aria-expanded="false" aria-controls="nav-links">Menu ☰</button><div class="nav-links" id="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="#research">Research</a><a href="#lab">The Lab</a><a class="pill" href="#contact">Get in touch ↗</a></div></div></nav>
+<main id="home">
+<section class="hero wrap">
+<div class="hero-top eyebrow"><span>Engineering / Research / Exploration</span><span>New Delhi · India</span></div>
+<div class="hero-grid"><div><h1>Engineering<br>the <em>physical</em><br>world.</h1><p class="lead">I'm Asad, an electronics and communication engineering undergraduate exploring the intersection of hardware, intelligent systems and research.</p><a class="pill" href="#work">Explore my work <span>↘</span></a></div>
+<div class="portrait" id="hero-media" data-image="assets/portfolio/portrait.jpg" data-video="assets/portfolio/hero.mp4"><svg viewBox="0 0 400 500" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1"><circle cx="200" cy="250" r="155"/><circle cx="200" cy="250" r="112"/><circle cx="200" cy="250" r="65"/><path d="M200 30V470M25 250H375M65 115L335 385M335 115L65 385"/><path d="M130 180H270V320H130Z" transform="rotate(45 200 250)"/></g><circle cx="200" cy="250" r="5" fill="currentColor"/></svg><span class="placeholder-label"><span>Portrait / film pending</span><span>01</span></span></div></div>
+<div class="hero-bottom eyebrow"><span>ECE · Jamia Millia Islamia</span><a href="#about">Scroll to discover ↓</a></div></section>
+<section id="about" class="section wrap intro reveal"><div><p class="eyebrow">01 / The person behind the work</p><h2 style="margin-top:20px">Always<br>curious.</h2></div><div><p>I am interested in how computation, electronics and the physical world can come together to solve meaningful problems.</p><p class="small muted">As a second-year ECE undergraduate at Jamia Millia Islamia, I build embedded prototypes, work with sensors and control systems, and investigate applied machine learning. I am also exploring digital VLSI and hardware-software co-design as developing research interests.</p><div class="tags"><span class="tag">Embedded C / C++</span><span class="tag">ESP32 / STM32</span><span class="tag">PCB design</span><span class="tag">Python</span><span class="tag">Sensor integration</span><span class="tag">Robotics</span></div></div></section>
+<section id="work" class="section dark"><div class="wrap"><div class="section-head reveal"><div><div class="eyebrow">02 / Selected work</div><h2>Ideas into<br>reality.</h2></div><p class="muted">Experiments, prototypes and investigations across electronics, robotics and intelligent systems.</p></div>
+<div class="projects">
+<article class="project reveal"><div class="media" data-image="assets/portfolio/pulmoaid.jpg"><svg viewBox="0 0 600 320" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-opacity=".23"><path d="M0 64H600M0 128H600M0 192H600M0 256H600M100 0V320M200 0V320M300 0V320M400 0V320M500 0V320"/></g><path d="M0 180H70L95 160L115 185L145 105L175 235L200 180H270L295 160L315 185L345 105L375 235L400 180H470L495 160L515 185L545 105L575 235L600 180" stroke="currentColor" stroke-width="3"/></svg><span class="placeholder-label">01 / Concept illustration</span></div><div class="project-meta eyebrow"><span>Biomedical systems</span><span>01</span></div><h3>Pulmoaid</h3><p>A respiratory pressure monitoring prototype with BLE transmission, real-time mobile visualization and CSV export.</p><details><summary>Technical overview</summary><p>ESP32-S3, MPRLS pressure sensor, I²C and BLE. Designed for exploratory monitoring and training; not a validated medical device.</p></details></article>
+<article class="project reveal"><div class="media blue" data-image="assets/portfolio/turret.jpg"><svg viewBox="0 0 600 320" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.5"><circle cx="300" cy="160" r="130"/><circle cx="300" cy="160" r="85"/><path d="M300 0V320M130 160H470M300 160L405 80"/><rect x="265" y="125" width="70" height="70" transform="rotate(-35 300 160)"/></g><circle cx="405" cy="80" r="7" fill="currentColor"/></svg><span class="placeholder-label">02 / Concept illustration</span></div><div class="project-meta eyebrow"><span>Robotics / Control</span><span>02</span></div><h3>Pan–tilt tracking</h3><p>Two-axis tracking prototype using serial commands, servo control and exponential smoothing to reduce jitter.</p><details><summary>Technical overview</summary><p>ESP32, PCA9685 servo driver, two SG90 servos and a USB serial interface. Exponential smoothing is applied to target angles.</p></details></article>
+<article class="project reveal"><div class="media clay" data-image="assets/portfolio/coil.jpg"><svg viewBox="0 0 600 320" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="2"><ellipse cx="225" cy="160" rx="75" ry="125"/><ellipse cx="375" cy="160" rx="75" ry="125"/><path d="M225 35C90 35 90 285 225 285M375 35C510 35 510 285 375 285M130 160H470M170 110H430M170 210H430"/></g><rect x="276" y="136" width="48" height="48" stroke="currentColor" stroke-dasharray="4 6"/></svg><span class="placeholder-label">03 / Concept illustration</span></div><div class="project-meta eyebrow"><span>Instrumentation / Feedback</span><span>03</span></div><h3>Magnetic field system</h3><p>Closed-loop magnetic field control using a coil system, PWM and magnetometer feedback.</p><details><summary>Technical overview</summary><p>ESP32-based control and RM3100 magnetometer measurements, with experimental comparison to theoretical field calculations. Public media and technical details are subject to permission.</p></details></article>
+<article class="project reveal"><div class="media slate" data-image="assets/portfolio/civicpulse.jpg"><svg viewBox="0 0 600 320" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-opacity=".6"><path d="M80 160L180 80L300 165L420 80L520 160L420 240L300 165L180 240L80 160M180 80L180 240M420 80V240M80 160H520M180 80L420 240M180 240L420 80"/></g><g fill="currentColor"><circle cx="80" cy="160" r="8"/><circle cx="180" cy="80" r="12"/><circle cx="180" cy="240" r="9"/><circle cx="300" cy="165" r="18"/><circle cx="420" cy="80" r="9"/><circle cx="420" cy="240" r="12"/><circle cx="520" cy="160" r="8"/></g></svg><span class="placeholder-label">04 / Concept illustration</span></div><div class="project-meta eyebrow"><span>Applied ML / Research</span><span>04</span></div><h3>CivicPulse-STGNN</h3><p>Empirical benchmarking of spatiotemporal graph learning for urban complaint prediction against simpler baselines.</p><details><summary>Research findings</summary><p>Persistence outperformed the tested neural models. The work emphasizes baseline strength, graph ablations and careful temporal evaluation rather than claiming a positive graph-learning result. Manuscript status: research report, not a peer-reviewed publication.</p></details></article>
+</div></div></section>
+<section id="research" class="section wrap research reveal"><div><div class="eyebrow">03 / Research direction</div><h2>What I'm<br>exploring.</h2><p>I am interested in research that connects computation with real hardware, and in learning how to evaluate those systems rigorously.</p><a class="pill" href="https://github.com/mirzasadbaig">Explore my GitHub ↗</a></div><div><article class="research-card"><div class="eyebrow">01 / Systems</div><h3>Embedded intelligence</h3><p>Real-time sensing, low-power computing and hardware-software co-design.</p></article><article class="research-card"><div class="eyebrow">02 / Machines</div><h3>Robotics & bionics</h3><p>Control, human-machine interfaces and sensor-driven physical systems.</p></article><article class="research-card"><div class="eyebrow">03 / Emerging interests</div><h3>Digital VLSI</h3><p>Building foundations in digital design, RTL and the implementation flow.</p></article></div></section>
+<section id="lab" class="section lab"><div class="wrap"><div class="section-head reveal"><div><div class="eyebrow">04 / The lab</div><h2>Built by hand.</h2></div><p>Earlier experiments and the process behind the prototypes.</p></div><div class="lab-grid"><article><div class="media" data-image="assets/portfolio/bionic-hand.jpg"><span class="placeholder-label">Photograph pending</span></div><h3>InMoov bionic hand</h3><p>EMG, servos and 3D-printed mechanisms.</p></article><article><div class="media blue" data-image="assets/portfolio/line-follower.jpg"><span class="placeholder-label">Photograph pending</span></div><h3>Autonomous line follower</h3><p>Arduino-based tracking and manual control.</p></article><article><div class="media clay" data-image="assets/portfolio/workbench.jpg"><span class="placeholder-label">Photograph pending</span></div><h3>Workbench</h3><p>Circuits, soldering and early experiments.</p></article></div></div></section>
+<section id="contact" class="section contact"><div class="wrap reveal"><div class="eyebrow">05 / Contact</div><h2>Let's build<br>something meaningful.</h2><p style="max-width:600px;margin-bottom:28px;font-size:1.15rem">Open to research collaborations, engineering internships and conversations about embedded systems and intelligent hardware.</p><div class="contact-links"><a class="pill" href="mailto:asadtanveer1109@gmail.com">Email me ↗</a><a class="pill" href="https://github.com/mirzasadbaig">GitHub ↗</a><a class="pill" href="https://www.linkedin.com/in/asadtanveer1109/">LinkedIn ↗</a></div></div></section>
+</main><footer><div class="wrap"><span>© 2026 Asad Tanveer</span><a href="#home">Back to top ↑</a></div></footer>
+<script>
+const menu=document.querySelector('.menu'), links=document.querySelector('.nav-links');
+menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open))});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false')}));
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if('IntersectionObserver' in window&&!reduce){document.documentElement.classList.add('js');const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){item.target.classList.remove('pending');observer.unobserve(item.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>{if(el.getBoundingClientRect().top>innerHeight){el.classList.add('pending');observer.observe(el)}})}
+// Media integration: remove data-image from a slot if no image is supplied.
+document.querySelectorAll('[data-image]').forEach(el=>{const img=new Image();img.alt=el.closest('article')?.querySelector('h3')?.textContent||'Asad Tanveer';img.decoding='async';img.onload=()=>{el.append(img);el.querySelector('.placeholder-label')?.remove()};img.src=el.dataset.image;});
+const hero=document.querySelector('#hero-media');
+if(!reduce&&hero.dataset.video){const video=document.createElement('video');video.muted=true;video.loop=true;video.playsInline=true;video.preload='metadata';video.setAttribute('aria-hidden','true');video.addEventListener('canplay',()=>{hero.append(video);video.play().catch(()=>video.remove());hero.querySelector('.placeholder-label')?.remove()},{once:true});video.src=hero.dataset.video;}
+</script>
+</body></html>
